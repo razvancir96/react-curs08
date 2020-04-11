@@ -17,7 +17,7 @@ function Cart(props) {
     return(
         // Nu uitam de Layout, pentru a avea Header si Footer
         <Layout>
-            <div className="cart-page content-min-height container-fluid container-min-max-width
+            <div className="cart-page container-fluid container-min-max-width
                 d-flex flex-column justify-content-center align-items-center">
                 {
                     // Daca avem produse in cart, le afisam.

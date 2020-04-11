@@ -28,14 +28,14 @@ function Header(props) {
                     <div className="d-flex justify-content-end">
                         { user && user.uid
                             ? <p className="logout h5" onClick={() => handleHeaderSignOut()}>Delogare</p>
-                            : <Link to="/login" className="text-dark h5 mb-0">Logare</Link>
+                            : <Link to="/login" className="h5 mb-0">Logare</Link>
                         }
                         <div className="d-flex align-items-center">
                             {/* Adaugam link catre pagina cart-ului */}
                             <Link to="/cart" className="d-flex">
                                 <ShoppingCart className="ml-2"/>
                                 {/* numberOfProducts e venit din store si salvat in props prin functia mapStateToProps!! */}
-                                <p className="ml-1 mb-0 text-dark">{ props.numberOfProducts }</p>
+                                <p className="ml-1 mb-0">{ props.numberOfProducts }</p>
                             </Link>
                         </div>
                     </div>

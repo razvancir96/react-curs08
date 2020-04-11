@@ -78,19 +78,6 @@ export function cartReducer(state = initialState, action) {
                     products: updatedProducts
                 });
             }
-        // Daca atiunea care s-a apelay are type-ul 'REMOVE_FROM_CART'
-        case 'REMOVE_FROM_CART':
-            // NU UITATI ca indiferent daca avem de modificat un singur element dintr-un array,
-            // in reduceri TREBUIE sa intoarcem un array nou! Avem de eliminat produsul cu id-ul
-            // primit, deci vom face un filter.
-            const filteredProducts = state.products.filter(product => {
-                return product.id !== action.payload.id
-            });
-
-            // Modificam valoarea vectorului products, din state, cu valoarea noului vector: filteredProducts.
-            return Object.assign({}, state, {
-                products: filteredProducts
-            });
         // In cazul default, returnam state-ul primit de reducer, nemodificat.
         default:
             return state;

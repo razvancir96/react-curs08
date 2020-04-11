@@ -15,11 +15,3 @@ export function addToCart(payload) {
         payload
     }
 }
-
-// Observari cum fiecare actiune este exportata separat(deci va fi iportata cu {}).
-export function removeFromCart(payload) {
-    return {
-        type: 'REMOVE_FROM_CART',
-        payload
-    }
-}

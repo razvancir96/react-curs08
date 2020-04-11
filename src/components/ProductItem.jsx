@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 // Trebuie sa importam actiunile pe care le vom utiliza(dispatch-ui).
 import { addToCart } from '../redux/actions/cart';
 
-const ProductItem = (props) => {
+function ProductItem(props) {
     // Trebuie sa extragem si id-ul pentru ca in reducerul ce aduaga in cart il folosim.
     const {name, price, currency, image, id} = props;
 

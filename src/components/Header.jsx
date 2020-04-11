@@ -7,7 +7,7 @@ import './Header.css';
 // la store-ul global pentru a-l extrage
 import { connect } from 'react-redux';
 
-const Header = (props) => {
+function Header(props) {
     const {user, signOut} = props;
 
     function handleHeaderSignOut() {

@@ -4,7 +4,7 @@ import Logo from '../assets/images/logo.png';
 import { ReactComponent as Google } from '../assets/icons/google.svg';
 import './Login.css'
 
-const Login = (props) => {
+function Login(props) {
     const {signInWithGoogle, history} = props;
 
     function handleGoogleLogin() {

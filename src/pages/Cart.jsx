@@ -13,7 +13,7 @@ import { ReactComponent as Close} from '../assets/icons/close.svg';
 
 // De ce Cart nu este o clasa? State-ul este tinut in store-ul global, deci nu va mai avea state! =>
 // poate fi o functional component.
-const Cart = (props) => {
+function Cart(props) {
     return(
         // Nu uitam de Layout, pentru a avea Header si Footer
         <Layout>

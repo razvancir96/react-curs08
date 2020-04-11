@@ -17,13 +17,12 @@ class Home extends React.Component{
     }
 
     render() {
-        const {user, signOut, handleSignOut} = this.props;
+        const {user, signOut} = this.props;
 
         return(
             <Layout
                 user={user}
                 signOut={signOut}
-                handleSignOut={handleSignOut}
             >
                 <div className="container-fluid container-min-max-width">
                     <div className="row">

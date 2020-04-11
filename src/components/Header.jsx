@@ -8,13 +8,10 @@ import './Header.css';
 import { connect } from 'react-redux';
 
 const Header = (props) => {
-    const {user, signOut, handleSignOut} = props;
+    const {user, signOut} = props;
 
     function handleHeaderSignOut() {
-        const signOutResponse = signOut();
-        signOutResponse.then(() => {
-            handleSignOut();
-        });
+        signOut();
     }
 
     return(

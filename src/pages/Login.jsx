@@ -5,13 +5,11 @@ import { ReactComponent as Google } from '../assets/icons/google.svg';
 import './Login.css'
 
 const Login = (props) => {
-    const {signInWithGoogle, updateUserState, history} = props;
+    const {signInWithGoogle, history} = props;
 
-    function handleGoogleLogin(signInWithGoogle, updateUserState) {
+    function handleGoogleLogin() {
         const googleLoginRespone = signInWithGoogle();
-        googleLoginRespone.then(loginInfo => {
-            const user = loginInfo.user;
-            updateUserState(user);
+        googleLoginRespone.then(() => {
             history.push('/');
         });
     }
@@ -27,7 +25,7 @@ const Login = (props) => {
 
             <button
                 className="btn btn-outline-dark d-flex align-items-center"
-                onClick={() => handleGoogleLogin(signInWithGoogle, updateUserState)}
+                onClick={() => handleGoogleLogin()}
             >
                 <Google className="w-50 mr-3"/>
                 <span className="text-nowrap">Loghează-te cu Google</span>

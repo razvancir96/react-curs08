@@ -23,19 +23,7 @@ const providers = {
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      user: {
-
-      }
-    }
-  }
-
-  updateUserState(userInfo) {
-    this.setState({user: userInfo});
-  }
-
-  handleSignOut() {
-    this.setState({user: ''});
+    this.state = {}
   }
 
   render() {
@@ -47,16 +35,14 @@ class App extends React.Component {
             render={(props) => <Login
               {...props}
               signInWithGoogle={this.props.signInWithGoogle}
-              updateUserState={(userInfo) => this.updateUserState(userInfo)}
             />}
           />
           <Route
             exact path='/'
             render={(props) => <Home
               {...props}
-              user={this.state.user}
+              user={this.props.user}
               signOut={this.props.signOut}
-              handleSignOut={() => this.handleSignOut()}
             />}
           />
           {/* Adaugam ruta pentru cart */}
@@ -70,9 +56,6 @@ class App extends React.Component {
   }
 }
 
-// ATENTIE! withFirebaseAuth este o HOC(vezi teorie). Practic, nu mai exportam direct App-ul,
-// ci inainte ii extindem functionalitatea, pasandu-i informatii suplimetare, despre firebase.
-// Folosind acest HOC, in App vom primi noi props-uri, de la firebase!
 export default withFirebaseAuth({
   providers,
   firebaseAppAuth,

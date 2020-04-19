@@ -8,7 +8,8 @@ import './Header.css';
 import { connect } from 'react-redux';
 
 function Header(props) {
-    const {user, signOut} = props;
+    // numberOfProducts este un injectat de functia mapStateToProps!
+    const {user, signOut, numberOfProducts } = props;
 
     function handleHeaderSignOut() {
         signOut();
@@ -35,7 +36,7 @@ function Header(props) {
                             <Link to="/cart" className="d-flex">
                                 <ShoppingCart className="ml-2"/>
                                 {/* numberOfProducts e venit din store si salvat in props prin functia mapStateToProps!! */}
-                                <p className="ml-1 mb-0">{ props.numberOfProducts }</p>
+                                <p className="ml-1 mb-0">{ numberOfProducts }</p>
                             </Link>
                         </div>
                     </div>

@@ -1,12 +1,6 @@
 // In acest folder vom scrie toti reducerii pentru a actualiza state-ul referitor la cart.
 
 // Un reducer trebuie sa aiba o stare initiala. Similar cu o componenta de React!
-// TODO: move this block of comments
-// Store-ul nostru contine date despre mai multe date, iar ele ar fi
-// indicat sa fie grupate. Datele despre cart vor fi tinute in cheia "cart", datele despre user
-// vor fi tinute in cheia "user" si asa mai departe. Atunci, cartul va avea actiunile si reducerul
-// lui, userul va avea actiunile si reducerul lui. Fiecare reducer va modifica O PARTE a state-ului
-// din store, iar pentru acea parte trebuie sa isi defineasca o stare initiala.
 const initialState = {
     // Cart-ul va contine mai multe produse.
     products: []

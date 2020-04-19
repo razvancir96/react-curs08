@@ -49,7 +49,7 @@ function ProductItem(props) {
 // mai departe payload-ul.
 function mapDispatchToProps(dispatch) {
     return {
-        addToCart: (product) => dispatch(addToCart(product))
+        addToCart: (payload) => dispatch(addToCart(payload))
     };
 }
 
